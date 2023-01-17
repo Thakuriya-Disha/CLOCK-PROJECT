@@ -10,7 +10,7 @@
 </head>
 <body>
     <section class="left">
-        <img src="./media/clock_logo.png" alt="Clock heading">
+        <img src="./media/clock_logo.png" alt="Clock heading" id="titleimg">
         <!--<span class="commentbox1">The message and image <br> will change according <br> to the time</span>-->
         <br><br><br>
         <div class="leftbox1">
@@ -54,7 +54,7 @@
             </div>
             <div class="gap3"></div>
             <div id="night">
-                <span class="logo4"></span>
+                <img src="./media/night1.jpg" alt="night logo" class="logo4">
                 <form>
                     <label>Set night time</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <select name="Night Alarm">
@@ -77,13 +77,14 @@
     <section class="right">
         <div class="rightbox1">
             <span>TIME</span>
-            <div class="time hour">10<br><span>hours</span></div><span>:</span>
-            <div class="time min">00<br><span>mins</span></div><span>:</span>
-            <div class="time sec">01<br><span>secs</span></div>
-            <div class="ampm">AM</div>
+            <div class="time hour" id="hrs"></div><span id="colon1">:</span>
+            <div class="time min" id="min"></div><span id="colon2">:</span>
+            <div class="time sec" id="sec"></div>
+            <div id="ampm"></div>
         </div>
         <div class="box1"></div>
         <div class="box2"></div>
     </section>
+    <script src="./script.js"></script>
 </body>
 </html>

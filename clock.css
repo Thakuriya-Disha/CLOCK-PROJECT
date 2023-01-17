@@ -7,7 +7,7 @@ body{
 .left{
     position: relative;
 }
-.left img{
+#titleimg{
     width: 204px; height: 77px;
     position:absolute;
     top: 34px; left: 124px;
@@ -100,7 +100,7 @@ body{
 }
 .gap1{
     position:absolute;
-    top:80px; left:47px;
+    top:75px; left:47px;
     border:1px solid #C2C2C2;
     height:33px; width:0px;
 }
@@ -108,18 +108,18 @@ body{
     background-image: url(./media/lunch_time.svg);
     width:34px; height:34px;
     position:absolute;
-    top:130px; left:30px;
+    top:123px; left:30px;
 }
 #afternoon form{
     font-size:16px;
     position:absolute;
-    top:130px; left:90px;
+    top:128px; left:90px;
     color:#3D087B;
     font-family: Arial, Helvetica, sans-serif;
 }
 .gap2{
     position:absolute;
-    top:175px; left:47px;
+    top:170px; left:47px;
     border:1px solid #C2C2C2;
     height:33px; width:0px;
 }
@@ -127,12 +127,12 @@ body{
     background-image: url(./media/nap_time.svg);
     width:34px; height:34px;
     position:absolute;
-    top:225px; left:30px;
+    top:220px; left:30px;
 }
 #evening form{
     font-size:16px;
     position:absolute;
-    top:225px; left:90px;
+    top:220px; left:90px;
     color:#3D087B;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -143,11 +143,9 @@ body{
     height:33px; width:0px;
 }
 .logo4{
-    background-image: url(./media/cloud-moon-solid.svg);
     width:34px; height:34px;
     position:absolute;
     top:310px; left:30px;
-    background-repeat:no-repeat;
 }
 #night form{
     font-size:16px;
@@ -184,9 +182,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     padding-top:20px;
 }
-.time span{
-    font-size:16px;
-}
 .hour{
     position:absolute;
     top:15px; left:100px;
@@ -199,11 +194,29 @@ body{
     position:absolute;
     top:15px; left:320px;
 }
-.ampm{
+#ampm{
     background-image: url(./media/AM_svg.svg);
     width:82px; height:90px;
     position:absolute;
-    top:62px; left:1121px;
+    top:15px; left:430px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    font-size:28px;
+    padding-top:28px;
+    background-repeat: no-repeat;
+}
+#colon1{
+    color:#8A11BF;
+    position:absolute;
+    top:35px; left:190px;
+    font-size:38px;
+}
+#colon2{
+    color:#8A11BF;
+    position:absolute;
+    top:35px; left:300px;
+    font-size:38px;
 }
 .box1{
     width:430px; height:130px;
