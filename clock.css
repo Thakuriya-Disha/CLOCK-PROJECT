@@ -1,8 +1,7 @@
 body{
     background-color: #3D087B;
-    margin:20px 60px;
     box-sizing: border-box;
-    height:850px;
+    height:850px; width:1105px;
 }
 .left{
     position: relative;
@@ -33,7 +32,7 @@ body{
     background-color:#65349ede;
     border:1px solid #3D087BDE;
     border-radius:10px;
-    width:553px; height:65px;
+    width:545px; height:65px;
     position:absolute;
     top:527px; left:124px;
     color:#FFFFFF;
@@ -51,10 +50,6 @@ body{
     top: 640px; left: 124px;
     color:#FFFFFF;
     font-size:24px;
-    transition: background-image 1s linear;
-}
-.left button:hover{
-    background-image: linear-gradient(to right,#6E54EC,#CB52F8,#FC5EFF,#F1A7C5);
 }
 .leftbox3{
     display:inline;
@@ -62,7 +57,7 @@ body{
     background-color:#65349ede;
     border:1px solid #3D087BDE;
     border-radius:10px;
-    width:243px; height:117px;
+    width:235px; height:117px;
     position:absolute;
     top: 630px; left: 437px;
     padding:10px; padding-bottom:20px;
@@ -237,4 +232,26 @@ body{
     position:absolute;
     top:55px; left:785px;
     z-index:2;
+}
+.rightbox2{
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+    width:536px; height:100px;
+    background-color: #FFFFFF;
+    position:absolute;
+    top:200px; left:706px;
+    color:#8E53F0;
+    font-family:'Baumans',cursive;
+    text-align:center;
+    padding-top:20px;
+    font-size:21px;
+    font-weight:bold;
+}
+.rightbox3{
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+    width:536px; height:345px;
+    background-color: #FFFFFF;
+    position:absolute;
+    top:340px; left:707px;
 }
