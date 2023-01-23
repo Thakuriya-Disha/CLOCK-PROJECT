@@ -4,6 +4,7 @@ function ClockStart(){
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
     let meridiem = document.getElementById("ampm");
+
     if(hours>=12)
     {
         if(hours==12)
@@ -28,41 +29,13 @@ function ClockStart(){
             meridiem.innerText = "AM";
         }
     }
+    
     let hrs=document.getElementById("hrs");
     hrs.innerHTML = `${hours} <br><span style="font-size:16px; color:#5F0089;">hours</span>`;
     let mins=document.getElementById("min");
     mins.innerHTML = `${minutes} <br><span style="font-size:16px; color:#5F0089;">mins</span>`;
     let secs=document.getElementById("sec");
-    secs.innerHTML = `${seconds} <br><span style="font-size:16px; color:#5F0089;">secs</span>`;
-
-    let msg1 = document.getElementById("boxChange1");
-    let msg2 = document.getElementById("boxChange2");
-    let chngImg = document.getElementById("boxChange3");
-
-    if((hours==8 || hours==9 || hours==10 || hours==11)&&(meridiem=="AM"))
-    {
-        msg1.innerText = "GOOD MORNING!! WAKE UP !!";
-        msg2.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
-        chngImg.innerHTML = "<img src='./media/Component 30 – 1.svg' alt='breakfast time'>"; 
-    }
-    else if((hours==12 || hours==1 || hours==2 || hours==3)&&(meridiem=="PM"))
-    {
-        msg1.innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP";
-        msg2.innerText = "LET'S HAVE SOME LUNCH !!";
-        chngImg.innerHTML = "<img src='./media/Component 31 – 1.svg' alt='lunch time'>";
-    }
-    else if((hours==4 || hours==5 || hours==6 || hours==7)&&(meridiem=="PM"))
-    {
-        msg1.innerText = "GOOD EVENING !!";
-        msg2.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!";
-        chngImg.innerHTML = "<img src='./media/evening.jpg' alt='evening snacks' width=536px height=345px>";
-    }
-    else
-    {
-        msg1.innerText = "GOOD NIGHT !!";
-        msg2.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
-        chngImg.innerHTML = "<img src='./media/Component 32 – 1.svg' alt='good night'>";
-    }
+    secs.innerHTML = `${seconds} <br><span style="font-size:16px; color:#5F0089;">secs</span>`;    
 }
 setInterval(() => {
     ClockStart();
@@ -86,3 +59,34 @@ alarmBtn.addEventListener("click", function(event){
     time3.innerText = alarm3.value;
     time4.innerText = alarm4.value;
 })
+
+let dateCopy = new Date();
+let hrsNow = dateCopy.getHours();
+let msg1 = document.getElementById("boxChange1");
+let msg2 = document.getElementById("boxChange2");
+let chngImg = document.getElementById("boxChange3");
+
+if(hrsNow==8 || hrsNow==9 || hrsNow==10 || hrsNow==11)
+{
+    msg1.innerText = "GOOD MORNING!! WAKE UP !!";
+    msg2.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
+    chngImg.innerHTML = "<img src='./media/Component 30 – 1.svg' alt='breakfast time'>";
+}
+if(hrsNow==12 || hrsNow==13 || hrsNow==14 || hrsNow==15)
+{
+    msg1.innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP";
+    msg2.innerText = "LET'S HAVE SOME LUNCH !!";
+    chngImg.innerHTML = "<img src='./media/Component 31 – 1.svg' alt='lunch time'>";
+}
+if(hrsNow==16 || hrsNow==17 || hrsNow==18 || hrsNow==19)
+{
+    msg1.innerText = "GOOD EVENING !!";
+    msg2.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!";
+    chngImg.innerHTML = "<img src='./media/evening.jpg' alt='evening snacks' width=536px height=345px>";
+}
+if(hrsNow>=20 || hrsNow<=7)
+{
+    msg1.innerText = "GOOD NIGHT !!";
+    msg2.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
+    chngImg.innerHTML = "<img src='./media/Component 32 – 1.svg' alt='good night'>";
+}
