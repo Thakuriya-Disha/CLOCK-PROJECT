@@ -58,35 +58,92 @@ alarmBtn.addEventListener("click", function(event){
     time2.innerText = alarm2.value;
     time3.innerText = alarm3.value;
     time4.innerText = alarm4.value;
+    
+    let change1=alarm1.value.split(' ');
+    let change2=alarm2.value.split(' ');
+    let change3=alarm3.value.split(' ');
+    let change4=alarm4.value.split(' ');
+
+    let msg2 = document.getElementById("boxChange2");
+    let chngImg = document.getElementById("boxChange3");
+
+    let dateOne = new Date();
+    let mer = dateOne.getHours();
+    if(mer < 12)
+    {
+        if(mer==0){
+            mer = 12;
+        }
+        if(change1[1]=="AM" || change2[1]=="AM" || change3[1]=="AM" || change4[1]=="AM")
+        {
+            if(parseInt(alarm1.value)==mer)
+            {
+                msg2.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
+                chngImg.innerHTML = "<img src='./media/Component 30 – 1.svg' alt='breakfast time'>";
+            }
+            if(parseInt(alarm2.value)==mer)
+            {
+                msg2.innerText = "LET'S HAVE SOME LUNCH !!";
+                chngImg.innerHTML = "<img src='./media/Component 31 – 1.svg' alt='lunch time'>";
+            }
+            if(parseInt(alarm3.value)==mer)
+            {
+                msg2.innerText = "STOP YAWNING, GET SOME TEA... ITS JUST EVENING!";
+                chngImg.innerHTML = "<img src='./media/evening.jpg' alt='evening snacks' width=525px height=341px>";
+            }
+            if(parseInt(alarm4.value)==mer)
+            {
+                msg2.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
+                chngImg.innerHTML = "<img src='./media/Component 32 – 1.svg' alt='good night'>";
+            }
+        }
+    }
+    else
+    {
+        if(mer>=12 && mer<24)
+        {
+            if(mer>12){
+                mer = mer-12;
+            }
+            if(change1[1]=="PM" || change2[1]=="PM" || change3[1]=="PM" || change4[1]=="PM")
+            {
+                if(parseInt(alarm1.value)==mer)
+                {
+                    msg2.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
+                    chngImg.innerHTML = "<img src='./media/Component 30 – 1.svg' alt='breakfast time'>";
+                }
+                if(parseInt(alarm2.value)==mer)
+                {
+                    msg2.innerText = "LET'S HAVE SOME LUNCH !!";
+                    chngImg.innerHTML = "<img src='./media/Component 31 – 1.svg' alt='lunch time'>";
+                }
+                if(parseInt(alarm3.value)==mer)
+                {
+                    msg2.innerText = "STOP YAWNING, GET SOME TEA... IT'S JUST EVENING!";
+                    chngImg.innerHTML = "<img src='./media/evening.jpg' alt='evening snacks' width=525px height=341px>";
+                }
+                if(parseInt(alarm4.value)==mer)
+                {
+                    msg2.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
+                    chngImg.innerHTML = "<img src='./media/Component 32 – 1.svg' alt='good night'>";
+                }
+            }
+        }
+    }
 })
 
-let dateCopy = new Date();
-let hrsNow = dateCopy.getHours();
+let dateTwo = new Date();
+let hrsNow = dateTwo.getHours();
 let msg1 = document.getElementById("boxChange1");
-let msg2 = document.getElementById("boxChange2");
-let chngImg = document.getElementById("boxChange3");
 
 if(hrsNow==8 || hrsNow==9 || hrsNow==10 || hrsNow==11)
-{
-    msg1.innerText = "GOOD MORNING!! WAKE UP !!";
-    msg2.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
-    chngImg.innerHTML = "<img src='./media/Component 30 – 1.svg' alt='breakfast time'>";
-}
+{    msg1.innerText = "GOOD MORNING!! WAKE UP !!";   }
+
 if(hrsNow==12 || hrsNow==13 || hrsNow==14 || hrsNow==15)
-{
-    msg1.innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP";
-    msg2.innerText = "LET'S HAVE SOME LUNCH !!";
-    chngImg.innerHTML = "<img src='./media/Component 31 – 1.svg' alt='lunch time'>";
-}
+{    msg1.innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP";   }
+
 if(hrsNow==16 || hrsNow==17 || hrsNow==18 || hrsNow==19)
-{
-    msg1.innerText = "GOOD EVENING !!";
-    msg2.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!";
-    chngImg.innerHTML = "<img src='./media/evening.jpg' alt='evening snacks' width=536px height=345px>";
-}
+{    msg1.innerText = "GOOD EVENING !!";     }
+
 if(hrsNow>=20 || hrsNow<=7)
-{
-    msg1.innerText = "GOOD NIGHT !!";
-    msg2.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
-    chngImg.innerHTML = "<img src='./media/Component 32 – 1.svg' alt='good night'>";
-}
+{   msg1.innerText = "GOOD NIGHT !!";   }
