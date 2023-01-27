@@ -31,11 +31,11 @@ function ClockStart(){
     }
     
     let hrs=document.getElementById("hrs");
-    hrs.innerHTML = `${hours} <br><span style="font-size:16px; color:#5F0089;">hours</span>`;
+    hrs.innerHTML = `${hours} <br><span style="font-size:18px; color:#5F0089;">hours</span>`;
     let mins=document.getElementById("min");
-    mins.innerHTML = `${minutes} <br><span style="font-size:16px; color:#5F0089;">mins</span>`;
+    mins.innerHTML = `${minutes} <br><span style="font-size:18px; color:#5F0089;">mins</span>`;
     let secs=document.getElementById("sec");
-    secs.innerHTML = `${seconds} <br><span style="font-size:16px; color:#5F0089;">secs</span>`;    
+    secs.innerHTML = `${seconds} <br><span style="font-size:18px; color:#5F0089;">secs</span>`;    
 }
 setInterval(() => {
     ClockStart();
@@ -50,6 +50,16 @@ let alarm1 = document.getElementById("alarm1");
 let alarm2 = document.getElementById("alarm2");
 let alarm3 = document.getElementById("alarm3");
 let alarm4 = document.getElementById("alarm4");
+
+alarmBtn.addEventListener("mouseover", function(event){
+    alarmBtn.style.backgroundImage = "linear-gradient(to left,#6E54EC,#CB52F8,#FC5EFF,#F1A7C5)";
+    alarmBtn.innerText = "Party Time!";
+})
+
+alarmBtn.addEventListener("mouseout", function(event){
+    alarmBtn.style.backgroundImage = "linear-gradient(to right,#6E54EC,#CB52F8,#FC5EFF,#F1A7C5)";
+    alarmBtn.innerText = "Set Alarm";
+})
 
 alarmBtn.addEventListener("click", function(event){
     alarmBtn.style.backgroundImage = "linear-gradient(to left,#6E54EC,#CB52F8,#FC5EFF,#F1A7C5)";
@@ -119,8 +129,8 @@ alarmBtn.addEventListener("click", function(event){
                 }
                 if(parseInt(alarm3.value)==mer)
                 {
-                    msg2.innerText = "STOP YAWNING, GET SOME TEA... IT'S JUST EVENING!";
-                    chngImg.innerHTML = "<img src='./media/evening.jpg' alt='evening snacks' width=525px height=341px>";
+                    msg2.innerText = "STOP YAWNING... GET SOME TEA !";
+                    chngImg.innerHTML = "<img src='./media/resize-1674823322740113724evening.jpg' alt='evening snacks'>";
                 }
                 if(parseInt(alarm4.value)==mer)
                 {

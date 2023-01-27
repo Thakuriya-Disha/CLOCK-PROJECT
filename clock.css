@@ -11,15 +11,6 @@ body{
     position:absolute;
     top: 34px; left: 124px;
 }
-.commentbox1{
-    position:absolute;
-    top: 23px; left: 474px;
-    width: 209px; height: 78px;
-    background-color:#FFFFFF;
-    color:#858585;
-    border-radius:10px;
-    padding-top:15px; padding-left:10px;
-}
 .leftbox1{
     background-color: #FFFFFF;
     border:1px solid #EDEDED;
@@ -32,14 +23,14 @@ body{
     background-color:#65349ede;
     border:1px solid #3D087BDE;
     border-radius:10px;
-    width:545px; height:65px;
+    width:555px; height:65px;
     position:absolute;
     top:527px; left:124px;
     color:#FFFFFF;
     font-size:21px;
     font-family:'Baumans', cursive;
     font-weight:bold;
-    padding-left:20px; padding-bottom:20px;
+    padding-left:10px; padding-bottom:20px;
 }
 .left button{
     border:1px solid #3D087B;
@@ -57,21 +48,12 @@ body{
     background-color:#65349ede;
     border:1px solid #3D087BDE;
     border-radius:10px;
-    width:235px; height:117px;
+    width:233px; height:117px;
     position:absolute;
     top: 630px; left: 437px;
     padding:10px; padding-bottom:20px;
     font-family:Arial, Helvetica, sans-serif;
     font-size:15px;
-}
-.commentbox2{
-    background-color:#FFFFFF;
-    color:#858585;
-    border-radius:15px;
-    padding-top:15px; padding-left:10px;
-    width:220px; height:50px;
-    position:absolute;
-    top:712px; left:56px;
 }
 .leftbox1 select{
     width:290px; height:35px;
@@ -246,6 +228,10 @@ body{
     font-size:21px;
     font-weight:bold;
 }
+#boxChange2{
+    position:relative;
+    top:18px;
+}
 .rightbox3{
     border: 1px solid #EDEDED;
     border-radius: 10px;
@@ -254,4 +240,178 @@ body{
     position:absolute;
     top:340px; left:707px;
     padding-top:15px;
+}
+@media only screen and (min-width:320px) and (max-width:576px){
+    body{
+        margin:30px;
+    }
+    #titleimg{
+        width: 230px;
+        height: 85px;
+        position:absolute;
+        top:30px;
+        left:30px;
+    }
+    .leftbox1{
+        width:290px; height:380px;
+        position:absolute;
+        top:400px; left:10px;
+    }
+    .leftbox1 select{
+        width:150px; height:35px;
+        font-size:18px;
+    }
+    #morning form{
+        font-size:20px;
+        position:absolute;
+        top:31px; left:75px;
+    }
+    #afternoon form{
+        font-size:20px;
+        position:absolute;
+        top:128px; left:75px;
+    }
+    #evening form{
+        font-size:20px;
+        position:absolute;
+        top:220px; left:73px;
+    }
+    #night form{
+        font-size:20px;
+        position:absolute;
+        top:307px; left:73px;
+    }
+    .leftbox2{
+        width:285px; height:100px;
+        position:absolute;
+        top:800px; left:10px;
+        font-size:18px;
+        padding-left:10px;
+    }
+    .left button{
+        width:295px; height:70px;
+        position:absolute;
+        top:940px; left:10px;
+        font-size:30px;
+    }
+    .leftbox3{
+        width:275px; height:117px;
+        position:absolute;
+        top:1030px; left:10px;
+        padding:10px;
+        padding-bottom:20px;
+    }
+    .rightbox1{
+        width:300px; height:150px;
+        position:absolute;
+        top:95px; left:0px;
+    }
+    .rightbox1 span{
+        font-size:18px;
+        position:absolute;
+        top:20px; left:120px;
+    }
+    .time{
+        width:57px; height:67px;
+        font-size:30px;
+        padding-top:15px;
+    }
+    .hour{
+        position:absolute;
+        top:50px; left:13px;
+    }
+    .min{
+        position:absolute;
+        top:50px; left:90px;
+    }
+    .sec{
+        position:absolute;
+        top:50px; left:165px;
+    }
+    #colon1{
+        position:absolute;
+        top:65px; left:75px;
+        font-size:40px;
+    }
+    #colon2{
+        position:absolute;
+        top:65px; left:150px;
+        font-size:40px;
+    }
+    #hrs span{
+        position:absolute;
+        top:50px; left:7px;
+    }
+    #min span{
+        position:absolute;
+        top:50px; left:12px;
+    }
+    #sec span{
+        position:absolute;
+        top:50px; left:12px;
+    }
+    #ampm{
+        width:57px; height:55px;
+        position:absolute;
+        top:50px; left:235px;
+        font-size:26px;
+        padding-top:25px;
+    }
+    .box1{
+        width:250px; height:80px;
+        position:absolute;
+        top:180px; left:23px;
+    }
+    .box2{
+        width:193px; height:80px;
+        position:absolute;
+        top:200px; left:47px;
+    }
+    .rightbox2{
+        width:290px; height:115px;
+        position:absolute;
+        top:1170px; left:10px;
+        font-size:20px;
+    }
+    .rightbox3{
+        width:290px; height:250px;
+        position:absolute;
+        top:1315px; left:10px;
+    }
+    .rightbox3 img{
+        width:285px; height:245px;
+    }
+    #boxChange2{
+        position:relative;
+        top:8px;
+    }
+}
+@media only screen and (min-width:577px) and (max-width:1200px){
+    body{
+        margin:60px;
+    }
+    .rightbox1{
+        position:absolute;
+        top:785px; left:138px;
+    }
+    .rightbox1 span{
+        position:absolute;
+        top:55px; left:20px;
+    }
+    .box1{
+        position:absolute;
+        top:800px; left:183px;
+    }
+    .box2{
+        position:absolute;
+        top:818px; left:207px;
+    }
+    .rightbox2{
+        position:absolute;
+        top:975px; left:138px;
+    }
+    .rightbox3{
+        position:absolute;
+        top:1130px; left:138px;
+    }
 }
